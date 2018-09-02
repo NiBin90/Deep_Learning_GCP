@@ -4,14 +4,10 @@ set -e
 set -o xtrace
 DEBIAN_FRONTEND=noninteractive
 
-sudo rm /etc/apt/apt.conf.d/*.*
 sudo apt update
 sudo apt install unzip -y
 sudo apt -y upgrade --force-yes -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold"
 sudo apt -y autoremove
-sudo ufw allow 8888:8898/tcp
-sudo apt -y install --force-yes -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" qtdeclarative5-dev qml-module-qtquick-controls
-sudo add-apt-repository ppa:graphics-drivers/ppa -y
 sudo apt update
 mkdir downloads
 cd downloads
