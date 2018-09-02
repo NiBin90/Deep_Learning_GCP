@@ -13,7 +13,7 @@ mkdir downloads
 cd downloads
 wget https://repo.continuum.io/archive/Anaconda3-5.0.1-Linux-x86_64.sh
 bash Anaconda3-5.0.1-Linux-x86_64.sh -b
-cd
+cd ~
 git clone https://github.com/fastai/fastai.git
 cd fastai/
 echo 'export PATH=~/anaconda3/bin:$PATH' >> ~/.bashrc
